@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  jenkins:
+    container_name: jenkins
+    build: ./jenkins
+    ports:
+      - '8080:8080'
+      - '443:8443'
+      - '50000:50000'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./jenkins_home:/var/jenkins_home
+  
+  webapp:
+    container_name: webapp
+    build: ./webapp
+    ports:
+      - "80:80"
+  api-server:
+    depends_on:
+      - webapp
+    container_name: api-server
+    build: ./repos/
+    ports:
+      - "4001:4001"
+    restart: always
+  sonar-cube:
+    container_name: sonar-cube
+    image: sonarqube
+    ports:
+      - "9000:9000"
+    restart: always
+
+volumes:
+  jenkins_data:
+    driver: local
