@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: Sephiroth
+Build-Jdk: 17.0.6
+Extension-Name: dependency-track
+Specification-Title: Dependency-Track is an intelligent Software Suppl
+ y Chain Component Analysis platform that allows organizations to iden
+ tify and reduce risk from the use of third-party and open source comp
+ onents. This plug-in can publish supported Software Bill-of-Materials
+  (SBOM) formats to Dependency-Track.
+Specification-Vendor: OWASP
+Implementation-Vendor: OWASP
+Implementation-Title: dependency-track
+Implementation-Version: 4.3.1
+Group-Id: org.jenkins-ci.plugins
+Short-Name: dependency-track
+Long-Name: OWASP Dependency-Track Plugin
+Url: https://github.com/jenkinsci/dependency-track-plugin
+Compatible-Since-Version: 3.0.0
+Minimum-Java-Version: 1.8
+Plugin-Version: 4.3.1
+Hudson-Version: 2.289.2
+Jenkins-Version: 2.289.2
+Plugin-Dependencies: credentials:2.6.1.1,plain-credentials:1.8
+Plugin-Developers: Ronny Perinke:sephirothj:
+Plugin-License-Name: Apache-2.0
+Plugin-License-Url: https://www.apache.org/licenses/LICENSE-2.0
+Plugin-ScmUrl: https://github.com/jenkinsci/dependency-track-plugin.git
+
